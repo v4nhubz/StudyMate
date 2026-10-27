@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Add an example task and complete it",
+    "sanity": true,
+    "viewport": "mobile",
+    "covers": [
+      "fixed mountain planner background video",
+      "cinematic intro shown once per browsing session",
+      "example task templates",
+      "animated welcome greeting",
+      "task creation",
+      "task completion",
+      "mobile planner spacing",
+      "developer footer support link",
+      "learning corner navigation",
+      "motivational student-focused intro quote"
+    ],
+    "description": "Verifies the planner offers example assignments that fit on a phone and can be completed.",
+    "steps": [
+      "Open the StudyMate planner on a mobile viewport",
+      "Confirm the cinematic laptop-boy intro appears for a new browsing session",
+      "Confirm the mountain video stays fixed behind the planner while scrolling after entering the planner",
+      "Observe the welcome heading as its accent word types and changes",
+      "Open Add task and choose the Mathematics Activity example task",
+      "Click the checkbox beside the new task",
+      "Scroll to the bottom of the planner and tap Contact Support"
+    ],
+    "expected": "The cinematic laptop-boy intro appears at the start of a new browsing session; after entering StudyMate, the planner is usable with the supplied aerial video visible as its background. The example task appears without horizontal overflow, shows as completed, and the bottom Contact Support link opens the developer's Facebook profile."
+  },
+  {
+    "name": "Sign in and sync tasks and adaptive practice history",
+    "viewport": "desktop",
+    "covers": [
+      "authentication",
+      "real-name greeting",
+      "protected state sync",
+      "account task sync",
+      "practice grade history sync",
+      "weak-topic persistence"
+    ],
+    "description": "Verifies an authenticated student keeps planner progress, completed-set review, and weak topics in the account.",
+    "steps": [
+      "Click Log in and complete the sign-in flow",
+      "Confirm the welcome heading uses the signed-in profile name",
+      "Complete a practice set and review its results",
+      "Refresh the page"
+    ],
+    "expected": "The signed-in name and the completed practice review remain available after refresh."
+  },
+  {
+    "name": "Complete a reasoning problem and see its grade",
+    "viewport": "mobile",
+    "covers": [
+      "reasoning-heavy practice questions",
+      "answer input",
+      "100 percent grading",
+      "feedback"
+    ],
+    "description": "Verifies a reasoning problem can be answered and graded.",
+    "steps": [
+      "Open Problem-Solving Practice",
+      "Enter a correct answer for a displayed problem",
+      "Click Grade my answer"
+    ],
+    "expected": "The problem shows a score and feedback."
+  },
+  {
+    "name": "Review all 20 answers and generate targeted next set",
+    "viewport": "desktop",
+    "covers": [
+      "20-question completion",
+      "full set answer review",
+      "overall grade",
+      "weak-topic detection",
+      "targeted next set generation"
+    ],
+    "description": "Verifies finishing all 20 problems shows every answer and grade before a new set is started, and lower-scoring topics are targeted next.",
+    "steps": [
+      "Complete and grade all 20 problems",
+      "Review the SET COMPLETE panel",
+      "Confirm each problem shows the student answer, expected answer, and score",
+      "Click Generate new set"
+    ],
+    "expected": "The full review remains visible until the button is clicked, then a new numbered set starts with targeted questions for any weak topics."
+  },
+  {
+    "name": "Use the 25 minute study timer",
+    "viewport": "mobile",
+    "covers": [
+      "25-minute study timer",
+      "start and pause controls",
+      "timer reset",
+      "responsive timer layout",
+      "installable PWA metadata"
+    ],
+    "description": "Verifies the focus timer remains usable on a small phone viewport.",
+    "steps": [
+      "Open the Study timer section",
+      "Click Start",
+      "Click Pause",
+      "Click Reset"
+    ],
+    "expected": "The timer starts, pauses, and returns to 25:00 without overflowing the phone layout."
+  },
+  {
+    "name": "Open the standalone dictionary and look up a word",
+    "viewport": "mobile",
+    "covers": [
+      "standalone top-level Dictionary tab",
+      "online English-English word lookup",
+      "multiple definitions and pronunciation when available",
+      "dictionary A–Z sample browsing",
+      "dictionary not-found feedback"
+    ],
+    "description": "Verifies the dictionary is separate from the planner, can look up a word online, and provides a helpful empty-result message.",
+    "steps": [
+      "Tap the Dictionary tab in the main StudyMate navigation",
+      "Search for curious and submit the search",
+      "Review the definition results and any available pronunciation controls",
+      "Search for a deliberately invalid word such as qzxqzxqzx and submit",
+      "Return to the Dictionary and browse sample words by letter C"
+    ],
+    "expected": "The Dictionary opens as its own page without the planner content. A valid word shows online English definitions and available word details; an invalid word shows a helpful not-found message, and A–Z sample browsing works."
+  },
+  {
+    "name": "Host and join a random 10-question problem-solving quiz",
+    "viewport": "desktop",
+    "covers": [
+      "multiplayer quiz room creation",
+      "six-digit join code",
+      "fresh unique 10-question problem-solving set per new room with persistent no-repeat history",
+      "solo training mode with one player",
+      "cross-player realtime room updates",
+      "host-only game controls",
+      "multiple-choice scoring",
+      "server-authoritative 10/20/30-second answer timer",
+      "speed-based points decrease by 60 each elapsed second",
+      "host-configurable question source and answer format",
+      "live leaderboard",
+      "finish quiz",
+      "answer reveal with correct-answer check and incorrect-answer X",
+      "manual Next question and Finish quiz controls",
+      "synchronized three-second countdown before each question",
+      "fresh generated questions across diverse academic and real-world topics",
+      "problem-solving-only quiz subjects with varied scenarios",
+      "original quiz sound effects and mute toggle"
+    ],
+    "description": "Verifies a host creates a room with ten randomly selected problem-solving questions, a second player joins, and the quiz runs through scoring and results.",
+    "steps": [
+      "Actor A enters a nickname, selects random problem-solving questions, multiple choice, and a 20-second timer, then creates a room",
+      "Confirm the room contains 10 problem-solving questions and shows a 20-second timer",
+      "Actor A shares the six-digit room code",
+      "Actor B enters a nickname and joins using that code in a second browser context",
+      "Confirm both actors see the same ten questions and both players",
+      "Actor A starts the quiz",
+      "Actor B selects an answer and submits it quickly",
+      "Wait until the answer timer reaches zero",
+      "Confirm the correct option receives a check, an incorrect selected option receives an X, and the correct answer is displayed",
+      "Confirm the host can press Next question after the answer reveal",
+      "Confirm all players see a synchronized 3-second countdown before the following question begins",
+      "Confirm a correct answer scores up to 1,000 points and loses 60 points for each elapsed second",
+      "Actor A advances through all 10 questions and finishes the quiz",
+      "Finish and create a second new room, then confirm its ten randomly generated prompts use different wording and a broad mix of subjects compared with the previous room",
+      "Create a solo room and start training with only the host present"
+    ],
+    "expected":      "Each random room contains ten questions from different categories such as science, geography, language, computing, history, logic, and mathematics, with varied wording and answer choices checked against persistent used-question history. The host can advance manually or let the reveal auto-advance, and each question begins only after all players see the synchronized three-second countdown. A solo host can train, scoring remains speed-based, answers are revealed, sound can be muted, and the final leaderboard appears."
+  },
+  {
+    "name": "Reject invalid room codes and unauthorized quiz controls",
+    "viewport": "mobile",
+    "covers": [
+      "invalid room code feedback",
+      "join validation",
+      "host authorization guardrail"
+    ],
+    "description": "Verifies invalid codes and non-host control attempts are rejected with visible feedback.",
+    "steps": [
+      "Open Multiplayer Quiz on a mobile viewport",
+      "Enter a nickname and an invalid six-digit room code",
+      "Submit Join room",
+      "Confirm a helpful room-not-found message appears",
+      "Join a valid waiting room as Actor B and attempt to start the quiz"
+    ],
+    "expected": "The invalid room code produces a visible error, and a non-host cannot start or advance the quiz."
+  },
+  {
+    "name": "Play an online chess match with legal-move and capture highlights",
+    "viewport": "desktop",
+    "covers": ["online chess room join", "random white and black assignment", "server-authoritative legal move validation", "cross-player FEN and move synchronization", "current-turn move permissions", "green legal destination squares", "red opponent-piece capture squares"],
+    "description": "Verifies two signed-in players can move in turns and see clear legal destination and capture highlights when selecting a piece.",
+    "steps": ["Actor A signs in and creates an online chess room", "Actor B signs in with a different account and joins the room code", "Confirm both actors see the same starting board and opposite assigned colors", "Select a piece that has legal moves and confirm empty legal destinations are green", "Confirm a legal destination occupied by an opponent piece is red to indicate a capture", "Make a legal move and confirm Actor B sees the update and can select a piece on their turn"],
+    "expected": "Empty legal destination squares are highlighted green, legal captures of opponent pieces are highlighted red, illegal squares remain unchanged, and both players can move only on their turns with synchronized boards."
+  },
+  {
+    "name": "Show chess game result and final duration",
+    "viewport": "mobile",
+    "covers": ["chess game-end checkmark", "stalemate and draw reason display", "winning color display", "game elapsed time and final duration", "responsive result banner"],
+    "description": "Verifies a completed online chess game shows a checkmark, the correct ending reason or winning color, and the final game duration.",
+    "steps": ["Actor A and Actor B join an online chess room", "Play legal moves until checkmate or a draw condition ends the game", "Confirm both players see a checkmark and a result naming the winning color or stalemate/draw reason", "Confirm the elapsed game time is visible during play and the final duration remains visible after the game ends"],
+    "expected": "The result banner identifies White or Black as the winner when checkmate occurs, explicitly labels stalemate when applicable, shows other draw reasons when detected, and retains the final elapsed duration on both players' screens."
+  },
+  {
+    "name": "Sync room members and remove disconnected players",
+    "viewport": "desktop",
+    "covers": [
+      "live player list synchronization with WebSocket and polling fallback",
+      "disconnect cleanup",
+      "host promotion",
+      "room start after second player joins",
+      "solo training start with one player"
+    ],
+    "description": "Verifies a second player appears for both actors, the host can start after the room reaches two players, and leaving or disconnecting removes a player from the room.",
+    "steps": [
+      "Actor A creates a room",
+      "Actor B joins using the six-digit code in a second browser context",
+      "Confirm both players appear in both room views",
+      "Actor A starts the quiz and Actor B sees the first question",
+      "Actor B leaves the room or closes the browser context",
+      "Confirm Actor A sees the player removed and the room remains responsive"
+    ],
+    "expected": "The player list updates for both actors, starting succeeds with two connected players, a solo host can start training with only one player, and a departing player is removed; if the host departs, a remaining player is promoted and can control the quiz."
+  },
+  {
+    "name": "Create a custom typed-answer quiz with a 10-second timer",
+    "viewport": "mobile",
+    "covers": [
+      "custom question entry and parsing",
+      "typed-answer submission and validation",
+      "host-selected answer type",
+      "10-second timer selection",
+      "custom correct-answer scoring",
+      "unlimited custom question bank per room",
+      "answer reveal after timer expires"
+    ],
+    "description": "Verifies a host can enter their own questions, select typed answers and a 10-second timer, then run the room with the configured settings.",
+    "steps": [
+      "Actor A enters a nickname",
+      "Select My own questions, Type the answer, and 10 seconds",
+      "Enter 12 question lines using Question | correct answer format",
+      "Create the room and confirm the selected settings appear in the waiting room",
+      "Actor B joins and Actor A starts",
+      "Actor B submits a correct typed answer before time expires"
+    ],
+    "expected":      "The room uses all 12 host-entered custom prompts in randomized order, accepts typed answers case-insensitively, applies the 10-second limit, awards a speed-based score for a correct answer, reveals the correct answer with player correctness feedback after time expires, and automatically starts the next question after the reveal."
+  },
+  {
+    "name": "Play a 60-second Tug of War match",
+    "viewport": "mobile",
+    "covers": ["Tug of War room creation", "six-digit join code", "balanced team assignment", "unique per-player question sequence", "answer validation", "rope movement", "60-second timer and winner", "individual correct/wrong leaderboard"],
+    "description": "Verifies two players can join and play the new team mode.",
+    "steps": ["Actor A creates a room", "Actor B joins with the code", "Confirm teams are balanced", "Host starts the match", "Players answer problems", "Confirm rope position and correct/wrong counts update"],
+    "expected": "The match balances teams, serves each player a sequence without repeated correct answers, moves the rope toward or away from the player's team according to correctness, and ends at the rope limit or 60-second timeout with team results."
+  }
+]

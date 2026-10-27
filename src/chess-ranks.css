@@ -1,0 +1,65 @@
+/* Use icon-only crops so labels from neighboring sprite cells never show. */
+.chess-rank-badge {
+  background-image: none;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.chess-rank-badge.badge-0 {
+  background-image: url('/resources/ranks/warrior.png');
+}
+
+.chess-rank-badge.badge-1 {
+  background-image: url('/resources/ranks/elite.png');
+}
+
+.chess-rank-badge.badge-2 {
+  background-image: url('/resources/ranks/master.png');
+}
+
+.chess-rank-badge.badge-3 {
+  background-image: url('/resources/ranks/grandmaster.png');
+}
+
+.chess-rank-badge.badge-4 {
+  background-image: url('/resources/ranks/epic.png');
+}
+
+.chess-rank-badge.badge-5 {
+  background-image: url('/resources/ranks/legend.png');
+}
+
+.chess-rank-badge.badge-6 {
+  background-image: url('/resources/ranks/mythic.png');
+}
+
+.chess-rank-badge.badge-7 {
+  background-image: url('/resources/ranks/mythic-glory.png');
+}
+
+.rank-list-badge {
+  width: 36px;
+  height: 36px;
+  flex-basis: 36px;
+  background-size: contain;
+  border-radius: 7px;
+  justify-self: center;
+}
+
+.rank-item {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  align-items: center;
+  justify-content: initial;
+  gap: 10px;
+  min-width: 0;
+  text-align: center;
+}
+
+.rank-item small {
+  min-width: 2.5em;
+  margin-left: 0;
+  text-align: right;
+}
